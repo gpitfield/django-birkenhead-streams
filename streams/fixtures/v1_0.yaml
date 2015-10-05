@@ -1,0 +1,75 @@
+- model: auth.user
+  pk: 1
+  fields:
+    username: 'test_handle'
+    password: 'just temp'
+- model: auth.user
+  pk: 2
+  fields:
+    username: 'test_handle_2'
+    password: 'just temp'
+- model: streams.profile
+  pk: 1
+  fields:
+    handle: 'test_handle'
+    icon_key: 'icon_key'
+- model: streams.profile
+  pk: 2
+  fields:
+    handle: 'another_test_handle'
+    icon_key: 'icon_key_2'
+- model: streams.profile
+  pk: 3
+  fields:
+    handle: 'test_handle_2'
+    icon_key: 'icon_key_3'
+- model: streams.stream
+  pk: 1
+  fields:
+    timestamp: '2014-01-01T12:00:00-00:00'
+    publish_key: 'test_publish_key'
+    subscription_key: 'test_subscription_key'
+    comm_key: 'test_chat_key'
+    title: 'word'
+    status: 'live'
+    duration: 32.2
+- model: streams.stream
+  pk: 2
+  fields:
+    timestamp: '2014-01-01T12:00:00-00:00'
+    publish_key: 'test_publish_key_2'
+    subscription_key: 'test_subscription_key_2'
+    comm_key: 'test_chat_key_2'
+    title: 'What up?'
+    status: 'scheduled'
+    duration: 0.0    
+- model: streams.streamprofile
+  pk: 1
+  fields:
+    stream: 1
+    profile: 1
+    role: 'primary'
+- model: streams.streamprofile
+  pk: 2
+  fields:
+    stream: 2
+    profile: 1
+    role: 'primary'
+- model: streams.profileuser
+  pk: 1
+  fields:
+    user: 1
+    profile: 1
+    role: 'identity'
+- model: streams.profileuser
+  pk: 2
+  fields:
+    user: 1
+    profile: 2
+    role: 'owner'    
+- model: streams.profileuser
+  pk: 3
+  fields:
+    user: 2
+    profile: 3
+    role: 'identity'
